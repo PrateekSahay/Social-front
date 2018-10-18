@@ -6,10 +6,6 @@
     display: inline-flex;
 }
 
-.User{
-    display: inline-flex;
-}
-
 img{
     width: 10rem;
 }
@@ -20,4 +16,31 @@ h2{
 
 .Topics{
     display: inline-flex;
+    flex-flow: row wrap;
+}
+
+.Leaderboard{
+    margin: 2rem;
+    width: 70rem;
+}
+
+mat-card{
+    margin: 1rem;
+}
+
+@media(max-width: 425px) {
+    .Info{
+        display: inline-flex;
+        flex-flow: column wrap;
+    }
+
+    .Leaderboard{
+        margin: 2rem;
+    }
+
+    .Topics{
+        display: inline-flex;
+        flex-flow: column wrap;
+    }
+
 }

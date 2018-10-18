@@ -16,6 +16,9 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { HomeComponent } from './home/home.component';
 import { AllTopicsComponent } from './all-topics/all-topics.component';
 import { RouterModule } from '@angular/router';
+import { MessagesComponent } from './messages/messages.component';
+import { NotificationComponent } from './notification/notification.component';
+import { ErrorPageComponent } from './error-page/error-page.component';
 
 
 
@@ -24,7 +27,10 @@ import { RouterModule } from '@angular/router';
     AppComponent,
     NavbarComponent,
     HomeComponent,
-    AllTopicsComponent
+    AllTopicsComponent,
+    MessagesComponent,
+    NotificationComponent,
+    ErrorPageComponent
   ],
   imports: [
     BrowserModule,
