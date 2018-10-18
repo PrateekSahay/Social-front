@@ -1,0 +1,23 @@
+.Info{
+    display: inline-flex;
+}
+
+.UserInfo{
+    display: inline-flex;
+}
+
+.User{
+    display: inline-flex;
+}
+
+img{
+    width: 10rem;
+}
+
+h2{
+    justify-content: center;
+}
+
+.Topics{
+    display: inline-flex;
+}
