@@ -9,6 +9,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatIconModule} from '@angular/material/icon';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -42,8 +44,10 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     MatButtonToggleModule,
     MatFormFieldModule,
     MatListModule,
+    MatIconModule,
     MatProgressBarModule,
     MatCardModule,
+    MatSidenavModule,
     AppRoutingModule,
     RouterModule
   ],

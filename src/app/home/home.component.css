@@ -1,27 +1,27 @@
 .Info{
-    display: inline-flex;
+    display: flex;
+    margin : 1rem;
 }
 
-.UserInfo{
-    display: inline-flex;
+.Leaderboard{
+    margin: 1rem;
 }
 
 img{
     width: 10rem;
 }
 
-h2{
-    justify-content: center;
-}
-
 .Topics{
-    display: inline-flex;
+    display: flex;
     flex-flow: row wrap;
 }
 
-.Leaderboard{
-    margin: 2rem;
-    width: 70rem;
+.PopularTopics{
+    margin:1rem;
+}
+
+.FavouriteTopics{
+    margin:1rem;
 }
 
 mat-card{
@@ -30,16 +30,14 @@ mat-card{
 
 @media(max-width: 425px) {
     .Info{
-        display: inline-flex;
-        flex-flow: column wrap;
+        flex-flow: column;
     }
 
-    .Leaderboard{
-        margin: 2rem;
+    mat-card{
+        width: 100%;
     }
 
     .Topics{
-        display: inline-flex;
         flex-flow: column wrap;
     }
 
