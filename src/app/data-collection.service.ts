@@ -6,15 +6,18 @@ import { HttpClient } from '@angular/common/http';
 })
 export class DataCollectionService {
 
+  ltopic:string="name";
+  limage:string="image";
+
   constructor(private http: HttpClient) { }
 
   getTopics()
   {
-    return this.http.get("https://localhost:3000/title?type=name");
+    return this.http.get("http://localhost:5000/api/values/title?type="+this.ltopic);
   }
 
   getImage()
   {
-    return this.http.get("https://localhost:3000/title?type=image");
+    return this.http.get("http://localhost:5000/api/values/title?type="+this.limage);
   }
 }

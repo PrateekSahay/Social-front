@@ -10,8 +10,8 @@ export class AllTopicsComponent implements OnInit {
 
   topics: any;
   images: any;
-  alltopics: Array<any>;
-  allimages: Array<any>;
+  // alltopics: Array<any>;
+  // allimages: Array<any>;
 
   constructor(private topicsService: DataCollectionService ) { }
 
@@ -22,9 +22,11 @@ export class AllTopicsComponent implements OnInit {
         console.log("Topics", this.topics);
         // this.alltopics = this.topics.results.map(image address)
         // console.log(this.alltopics);
+
       }
     )
 
+    
     this.topicsService.getImage().subscribe(
       (data) => {
         this.images = data;
@@ -33,6 +35,7 @@ export class AllTopicsComponent implements OnInit {
         // console.log(this.alltopics);
       }
     )
+    
   }
 
 }
