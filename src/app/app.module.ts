@@ -24,6 +24,7 @@ import { RouterModule } from '@angular/router';
 import { MessagesComponent } from './messages/messages.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 
 
@@ -35,7 +36,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
     AllTopicsComponent,
     MessagesComponent,
     NotificationComponent,
-    ErrorPageComponent
+    ErrorPageComponent,
+    UserprofileComponent
   ],
   imports: [
     BrowserModule,

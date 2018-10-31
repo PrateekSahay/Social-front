@@ -13,13 +13,12 @@ export class DataCollectionService {
 
   getTopics()
   {
-   // return this.http.get("http://localhost:5000/api/values/title?type="+this.ltopic);
-   return this.http.get("http://localhost:5000/api/values");
+    return this.http.get("http://localhost:5000/api/values");
   }
 /*
   getImage()
   {
-    return this.http.get("http://localhost:5000/api/values/title?type="+this.limage);
+    return this.http.get("http://localhost:5000/api/values");
   }
 
 */
