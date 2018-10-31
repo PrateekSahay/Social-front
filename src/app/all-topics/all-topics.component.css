@@ -1,5 +1,6 @@
 .Topics{
-    display: inline-flex;
+    display: flex;
+    flex-flow: row wrap;
 }
 
 img{
