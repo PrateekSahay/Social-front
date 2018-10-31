@@ -1,41 +1,15 @@
 <!-- <div class="Category"> -->
-  <h2>Category1</h2>
-  <div class="Topics">
-    
-    <mat-card *ngFor="let a of images" class="Topic">
-      <img mat-card-image src="{{a.topic_image}}" alt="{{x}}" />
-      <!-- <mat-card-title>{{a.topic_name}}</mat-card-title> -->
-    </mat-card>
+<h2>Category1</h2>
+<div class="Topics">
+  <mat-card *ngFor="let a of topics" class="Topic">
+    <img mat-card-image src="{{a.topic_image}}"/>
+    <mat-card-title>{{a.topic_name}}</mat-card-title>
+  </mat-card>
+<!--   
+  <mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              (page)="pageEvent = $event">
+</mat-paginator> -->
 
-    <mat-card *ngFor="let a of topics" class="Topic">
-        <mat-card-title>{{a.topic_name}}</mat-card-title>
-      </mat-card>
- 
-  </div>
-
-  <!-- <div class="Topics">
-    <mat-card *ngFor="let a of topics" class="Topic">
-      <img mat-card-image src="{{a}}" alt="{{a.topicname}}" /> 
-      <mat-card-title>{{a}}</mat-card-title>
-    </mat-card>
-  </div> -->
-    <!-- <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg" />
-      <mat-card-title>Cricket</mat-card-title>
-    </mat-card>
-  </div>
 </div>
-<div class="Category">
-  <h2>Category2</h2>
-  <div class="Topics">
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg" />
-      <mat-card-title>Football</mat-card-title>
-    </mat-card>
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg" />
-      <mat-card-title>Cricket</mat-card-title>
-    </mat-card>
-  </div>
-</div> -->
-<!-- <router-outlet></router-outlet> -->
+ 
