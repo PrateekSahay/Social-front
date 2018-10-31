@@ -10,9 +10,7 @@ import {PageEvent} from '@angular/material';
 export class AllTopicsComponent implements OnInit {
 
   topics: any;
-  images: any;
-  // alltopics: Array<any>;
-  // allimages: Array<any>;
+  
 
   constructor(private topicsService: DataCollectionService ) { }
 
@@ -27,21 +25,11 @@ export class AllTopicsComponent implements OnInit {
       }
     )
 
-/*
-    
-    this.topicsService.getImage().subscribe(
-      (data) => {
-        this.images = data;
-        console.log("Images", this.images);
-        // this.alltopics = this.topics.results.map(image address)
-        // console.log(this.alltopics);j
-      }
-    )
-    */
-    
+
   }
 
 // MatPaginator Inputs
+/*
 length = 100;
 pageSize = 5;
 pageSizeOptions: number[] = [5, 10, 25, 100];
@@ -52,5 +40,5 @@ pageEvent: PageEvent;
 setPageSizeOptions(setPageSizeOptionsInput: string) {
   this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
 }
-
+*/
 }

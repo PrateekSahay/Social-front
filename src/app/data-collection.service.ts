@@ -15,11 +15,5 @@ export class DataCollectionService {
   {
     return this.http.get("http://localhost:5000/api/values");
   }
-/*
-  getImage()
-  {
-    return this.http.get("http://localhost:5000/api/values");
-  }
 
-*/
 }

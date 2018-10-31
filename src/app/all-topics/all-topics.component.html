@@ -1,14 +1,15 @@
 <!-- <div class="Category"> -->
 <h2>Category1</h2>
-<div class="Topics" *ngIf="pageEvent">
+<div class="Topics">
   <mat-card *ngFor="let a of topics" class="Topic">
     <img mat-card-image src="{{a.topic_image}}"/>
     <mat-card-title>{{a.topic_name}}</mat-card-title>
   </mat-card>
+<!--   
   <mat-paginator [length]="length"
               [pageSize]="pageSize"
               (page)="pageEvent = $event">
-</mat-paginator>
+</mat-paginator> -->
 
 </div>
  
