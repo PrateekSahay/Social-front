@@ -12,6 +12,7 @@ import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import {MatRippleModule} from '@angular/material/core';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -54,7 +55,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     MatSidenavModule,
     AppRoutingModule,
     RouterModule,
-    HttpClientModule
+    HttpClientModule,
+    MatRippleModule
   ],
   providers: [],
   bootstrap: [AppComponent]
