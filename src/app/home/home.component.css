@@ -1,44 +1,12 @@
-.Info{
-    display: flex;
-    margin : 1rem;
-}
-
-.Leaderboard{
-    margin: 1rem;
-}
-
-img{
-    width: 10rem;
-}
-
-.Topics{
-    display: flex;
-    flex-flow: row wrap;
-}
-
-.PopularTopics{
-    margin:1rem;
-}
-
-.FavouriteTopics{
-    margin:1rem;
-}
-
-mat-card{
-    margin: 1rem;
-}
-
 @media(max-width: 425px) {
-    .Info{
-        flex-flow: column;
+    .mat-card-content>:first-child, .mat-card>:first-child {
+        margin-top: 0;
+        justify-content: space-around;
     }
-
-    mat-card{
-        width: 100%;
+    
+    .ProfilePic{
+        width: 80px;
+        height: 80px;
+        padding-right: 16px;
     }
-
-    .Topics{
-        flex-flow: column wrap;
-    }
-
 }

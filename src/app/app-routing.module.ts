@@ -5,6 +5,7 @@ import { AllTopicsComponent } from './all-topics/all-topics.component';
 import { MessagesComponent } from './messages/messages.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
+import { UserprofileComponent } from './userprofile/userprofile.component';
 
 const routes: Route[] = [
   {path:'', redirectTo:'/home', pathMatch:'full'},
@@ -12,6 +13,7 @@ const routes: Route[] = [
   {path:'topics',component: AllTopicsComponent},
   {path:'messages',component: MessagesComponent},
   {path:'notification',component:NotificationComponent },
+  {path:'home/viewprofile',component:UserprofileComponent},
   {path:'**',component: ErrorPageComponent}
 ];
 
