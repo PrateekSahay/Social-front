@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { DataCollectionService } from '../data-collection.service';
-import {PageEvent} from '@angular/material';
 
 @Component({
   selector: 'app-all-topics',
@@ -10,8 +9,9 @@ import {PageEvent} from '@angular/material';
 export class AllTopicsComponent implements OnInit {
 
   topics: any;
+  pageData: any;
+  pageNo = 5;
   
-
   constructor(private topicsService: DataCollectionService ) { }
 
   ngOnInit() {
@@ -19,26 +19,8 @@ export class AllTopicsComponent implements OnInit {
       (data) => {
         this.topics = data;
         console.log("Topics", this.topics);
-        // this.alltopics = this.topics.results.map(image address)
-        // console.log(this.alltopics);
-
       }
     )
-
-
   }
 
-// MatPaginator Inputs
-/*
-length = 100;
-pageSize = 5;
-pageSizeOptions: number[] = [5, 10, 25, 100];
-
-// MatPaginator Output
-pageEvent: PageEvent;
-
-setPageSizeOptions(setPageSizeOptionsInput: string) {
-  this.pageSizeOptions = setPageSizeOptionsInput.split(',').map(str => +str);
-}
-*/
 }
