@@ -25,6 +25,7 @@ import { MessagesComponent } from './messages/messages.component';
 import { NotificationComponent } from './notification/notification.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
+import { TopicComponent } from './topic/topic.component';
 
 
 
@@ -37,7 +38,8 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
     MessagesComponent,
     NotificationComponent,
     ErrorPageComponent,
-    UserprofileComponent
+    UserprofileComponent,
+    TopicComponent
   ],
   imports: [
     BrowserModule,
