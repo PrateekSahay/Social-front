@@ -21,6 +21,6 @@ export class AllTopicsComponent implements OnInit {
         console.log("Topics", this.topics);
       }
     )
-    this.topicsService.postTopics(this.topics).subscribe();
+    // this.topicsService.postTopics(this.topics).subscribe();
 }
 }

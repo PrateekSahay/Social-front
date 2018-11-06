@@ -16,8 +16,8 @@ export class DataCollectionService {
     return this.http.get("http://172.23.238.164:8080/api/quizrt/template");
   }
 
-  postTopics(topics){
-    return this.http.post("http://localhost:5000",topics);
-  }
+  // postTopics(topics){
+  //   return this.http.post("http://localhost:5000",topics);
+  // }
 
 }

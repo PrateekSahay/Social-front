@@ -3,7 +3,7 @@
 <div class="Topics">
   <mat-card *ngFor="let a of topics" class="Topic">
     <!-- <img mat-card-image src="../../../img/male-icon-4.jpg"> -->
-    <mat-card-title routerLink="topic">{{a.topicName}}</mat-card-title>
+    <mat-card-title routerLink="{{a.topicName}}">{{a.topicName}}</mat-card-title>
   </mat-card>
 <!--   
   <mat-paginator [length]="length"
