@@ -14,7 +14,12 @@ export class DataCollectionService {
   getTopics()
   {
     //return this.http.get("http://172.23.238.164:8080/api/quizrt/template");
-    return this.http.get("http://localhost:5000/api/values/topics");
+    return this.http.get("http://localhost:5000/api/values/getTopics");
+  }
+
+  getPosts()
+  {
+    return this.http.get("http://localhost:5000/api/values/posts/cricket");
   }
 
 
