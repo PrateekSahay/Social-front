@@ -13,6 +13,7 @@ import {MatSidenavModule} from '@angular/material/sidenav';
 import {MatIconModule} from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
+import {MatExpansionModule} from '@angular/material/expansion';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -58,9 +59,10 @@ import { TopicComponent } from './topic/topic.component';
     AppRoutingModule,
     RouterModule,
     HttpClientModule,
+    MatExpansionModule,
     MatPaginatorModule
   ],
-  providers: [],
+  providers: [AllTopicsComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -6,7 +6,11 @@
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
-
+  mat-expansion-panel{
+    margin:0;
+    width: 100%;
+    padding:0;
+  }
   @media(max-width: 425px) {
     
     .ProfilePic{

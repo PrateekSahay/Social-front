@@ -9,11 +9,19 @@ import { DataCollectionService } from '../data-collection.service';
 })
 export class TopicComponent implements OnInit {
 
-  topics: any;
+  posts: any;
 
-  constructor(public AllTopics: AllTopicsComponent) { }
+  constructor(
+    private topicsService: DataCollectionService,
+    public AllTopics: AllTopicsComponent) { }
 
   ngOnInit() {
+    this.topicsService.getPosts().subscribe(
+      (data) => {
+        this.posts = data;
+        console.log("Posts", this.posts);
+      }
+    )
     
   }
 

@@ -15,7 +15,7 @@ const routes: Route[] = [
   {path:'messages',component: MessagesComponent},
   {path:'notification',component:NotificationComponent },
   {path:'home/viewprofile',component:UserprofileComponent},
-  {path:'topics/topicName',component:TopicComponent},
+  {path:'topics/:id',component:TopicComponent},
   {path:'**',component: ErrorPageComponent}
 ];
 
