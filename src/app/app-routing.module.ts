@@ -7,15 +7,17 @@ import { NotificationComponent } from './notification/notification.component';
 import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TopicComponent } from './topic/topic.component';
+import { PublicprofileComponent } from './publicprofile/publicprofile.component';
 
 const routes: Route[] = [
-  {path:'', redirectTo:'/home', pathMatch:'full'},
-  {path:'home',component: HomeComponent},
+  {path:'', redirectTo:'/', pathMatch:'full'},
+  {path:'',component: HomeComponent},
   {path:'topics',component: AllTopicsComponent},
   {path:'messages',component: MessagesComponent},
   {path:'notification',component:NotificationComponent },
-  {path:'home/viewprofile',component:UserprofileComponent},
+  {path:'viewprofile',component:UserprofileComponent},
   {path:'topics/:id',component:TopicComponent},
+  {path:'profile',component:PublicprofileComponent},
   {path:'**',component: ErrorPageComponent}
 ];
 

@@ -15,32 +15,59 @@
     top: 0;
     z-index: 1;
   }
+
   form{
     margin: 0%;
   }
   
 mat-toolbar #mySearch{
-  margin-top: 2px;
-  margin-bottom: 5px;
-  padding: 7px;
-  background: #ddd;
-  font-size: 17px;
+  padding: 3%;
+  font-size: 90%;
   border: none;
-  
+  width: 90%;
 }
 
 mat-toolbar #mySearchButton{
-  margin-top: 2px;
-  margin-bottom: 5px;
+  margin-bottom: 0px;
   padding: 3px;
-  background: #ddd;
   display: inline-block;
   position: absolute;
-  height: 34px;
   border: none;
+  width:10%;
 }
 
-  .text{
-    display: flex;
-    margin-left: 1rem;
+  
+
+  @media(max-width: 425px){
+    mat-toolbar .text{
+      float: right;
+      margin-left: 1rem;
+    }
+
+    .mysearch{
+      
+    }
+    
+    #search{
+  padding: 2%;
+  background: #ddd;
+  font-size: 17px;
+  border: none;
+    }
+
+    mat-toolbar #mySearchButton{
+      margin-bottom: 0px;
+      padding: 3px;
+      display: inline-block;
+      height: 34px;
+      position: absolute;
+      border: none;
+      width:10%;
+    } 
+
+    #searchbutton{
+      padding: 0%;
+      display: contents;
+    }
+    
   }

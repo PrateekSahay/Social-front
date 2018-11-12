@@ -24,8 +24,17 @@
       resize: none;
     }
 
+    .title{
+      justify-content: space-around;
+      margin-bottom: 6%;
+    }
+
     mat-card-content{
         display: flex;
         justify-content: space-around;
+    }
+
+    #playbutton{
+      margin: 0%;
     }
   }
