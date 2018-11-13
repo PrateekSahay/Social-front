@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 import { DataCollectionService } from '../data-collection.service';
 import { forEach } from '@angular/router/src/utils/collection';
 import { element } from 'protractor';
+import { url } from 'inspector';
 
 
 @Component({
@@ -19,7 +20,8 @@ export class TopicComponent implements OnInit {
 
   constructor(
     private topicsService: DataCollectionService,
-    private route: ActivatedRoute) { }
+    private route: ActivatedRoute,
+    private router: Router) { }
 
   ngOnInit() {
     this.topicsService.getTopics().subscribe(
@@ -39,6 +41,9 @@ export class TopicComponent implements OnInit {
 
     this.route.paramMap.subscribe(params => { this.name = params.get("id") })
     console.log(this.name);
+
+    
+
   }
 
   getTopicPosts() {
@@ -58,4 +63,10 @@ export class TopicComponent implements OnInit {
     }
   }
 }
+
+  gotoGameplay(){
+    // this.router.navigate(['/externalRedirect', { externalUrl: url}]);
+    console.log("ngggggg");
+    window.location.href = "http://172.23.238.164:4202/play";
+  }
 }
