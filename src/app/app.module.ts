@@ -15,7 +15,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
 import {FlexLayoutModule} from '@angular/flex-layout';
-
+import {MatTableModule} from '@angular/material/table';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -56,6 +56,7 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     MatFormFieldModule,
     MatListModule,
     MatIconModule,
+    MatTableModule,
     MatProgressBarModule,
     MatCardModule,
     MatSidenavModule,

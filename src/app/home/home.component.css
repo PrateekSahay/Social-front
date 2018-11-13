@@ -1,3 +1,15 @@
+.User{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
+.Topics{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+
 @media(max-width: 425px) {
     .mat-card-content>:first-child, .mat-card>:first-child {
         margin-top: 0;
@@ -8,5 +20,13 @@
         width: 80px;
         height: 80px;
         padding-right: 16px;
+    }
+
+    .User{
+        flex-flow: column wrap;
+    }
+
+    .Topics{
+        flex-flow: column wrap;
     }
 }
