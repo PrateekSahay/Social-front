@@ -1,14 +1,38 @@
-.User{
+.UserInfo{
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row wrap;    
+    justify-content: space-around;
 }
 
+.User{
+    margin-top: 3%;
+}
+
+.ProfilePic{
+    width: 9rem;
+    height: 20vh;
+}
 
 .Topics{
     display: flex;
     flex-flow: row wrap;
 }
 
+.Leaderboard{
+    width: 60%;
+}
+
+mat-header-cell{
+    justify-content: center;
+}
+
+mat-cell{
+    justify-content: center;
+}
+
+h3, h4, h5, h6{
+    margin: 1%;
+}
 
 @media(max-width: 425px) {
     .mat-card-content>:first-child, .mat-card>:first-child {
@@ -22,11 +46,15 @@
         padding-right: 16px;
     }
 
-    .User{
+    .UserInfo{
         flex-flow: column wrap;
     }
 
     .Topics{
         flex-flow: column wrap;
+    }
+
+    .Leaderboard{
+        width: 100%;
     }
 }
