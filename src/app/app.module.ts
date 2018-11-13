@@ -14,6 +14,7 @@ import {MatIconModule} from '@angular/material/icon';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {FlexLayoutModule} from '@angular/flex-layout';
 
 
 import { AppRoutingModule } from './app-routing.module';
@@ -62,7 +63,8 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     RouterModule,
     HttpClientModule,
     MatExpansionModule,
-    MatPaginatorModule
+    MatPaginatorModule,
+    FlexLayoutModule
   ],
   providers: [AllTopicsComponent],
   bootstrap: [AppComponent]

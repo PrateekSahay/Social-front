@@ -1,30 +1,37 @@
-<mat-sidenav-container class="sidenav-container">
-    <mat-sidenav #drawer class="sidenav" fixedInViewport="true" [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
-      [mode]="(isHandset$ | async) ? 'over' : 'side'" [opened]="!(isHandset$ | async)">
-      
-      <mat-nav-list>
-        <a mat-list-item routerLink="">Home</a>
-        <a mat-list-item routerLink="topics">Topics</a>
-        <a mat-list-item routerLink="messages">Message</a>
-        <a mat-list-item routerLink="notification">Notifications</a>
-      </mat-nav-list>
+<div> 
+  <mat-toolbar color="primary">
+    <div fxShow="true" fxHide.gt-sm="true">
+      <button mat-icon-button (click)="sidenav.toggle()">
+        <mat-icon>menu</mat-icon>
+      </button>
+    </div>
+
+    <a mat-button class="companyName" routerLink="/">
+      <span>QuizRT</span>
+    </a>
+    <span class="example-spacer"></span>
+    <div fxShow="true" fxHide.lt-md="true">
+      <a mat-button routerLink="">Home</a>
+      <a mat-button routerLink="topics">Topics</a>
+      <a mat-button routerLink="messages">Message</a>
+      <a mat-button routerLink="notification">Notifications</a>
+      <!-- <a mat-button routerLink="/contact">Contact</a> -->
+    </div>
+
+  </mat-toolbar>
+  <mat-sidenav-container fxFlexFill class="example-container">
+
+    <mat-sidenav color="primary" #sidenav fxLayout="column" mode="over"  opened="false" fxHide.gt-sm="true">
+      <div fxLayout="column">
+        <a mat-button routerLink="">Home</a>
+        <a mat-button routerLink="topics">Topics</a>
+        <a mat-button routerLink="messages">Message</a>
+        <a mat-button routerLink="notification">Notifications</a>
+        <!-- <a mat-button routerLink="/contact">Contact</a> -->
+      </div>
     </mat-sidenav>
-    <mat-sidenav-content>
-      <mat-toolbar color="primary">
-        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" *ngIf="isHandset$ | async">
-          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
-        </button>
-        <span>QuizRT</span>
-        <div class="text">
-            <form class="mysearch">
-              <input type="search" id="search" name="localhost:3000" placeholder="Search Topics...">
-              <button mat-button id="searchbutton"><mat-icon>search</mat-icon></button>
-            </form>
-            </div>
-      </mat-toolbar>
-      <!-- Add Content Here -->
-     <router-outlet></router-outlet>
+    <mat-sidenav-content fxFlexFill>
+      <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-
-  
+</div>
