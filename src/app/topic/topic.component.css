@@ -1,16 +1,45 @@
-.example-card {
+.TopicInfo{
+  justify-content: space-around;
+}
+
+.Topic{
+  margin: 3%;
+  float: left;
+}
+
+.ProfilePic{
+  width: 80px;
+  height: 80px;
+  padding-right: 16px;
+  margin: 1% 2% 3% 4%;
+}
+
+.posts{
+  margin: 3%;
+  float: right;
+}
+
+.post-card {
     max-width: 400px;
+    justify-content: center;
   }
   
-  .example-header-image {
+  .post-header-image {
     background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
     background-size: cover;
   }
+
+.WritePost{
+  display: inline-grid;
+}
+
   mat-expansion-panel{
     margin:0;
     width: 100%;
     padding:0;
   }
+
+
   @media(max-width: 425px) {
     
     .ProfilePic{

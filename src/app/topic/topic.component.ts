@@ -36,7 +36,7 @@ export class TopicComponent implements OnInit {
       (data) => {
         this.posts = data;
         console.log("Posts", this.posts);
-        this.getTopicPosts();
+       // this.getTopicPosts();
       })
 
     this.route.paramMap.subscribe(params => { this.name = params.get("id") })
@@ -46,23 +46,23 @@ export class TopicComponent implements OnInit {
 
   }
 
-  getTopicPosts() {
-    console.log("AAAAAZZAA");
-    console.log(this.posts);
-    for (let x of this.topics) {
-      for (let a of this.posts) {
-        console.log(a.topicForeignKey);
-        if (x.topic_id == a.topicForeignKey){
-          this.topicsService.getPosts().subscribe(
-            (data) => {
-              this.topicposts = data;
-              console.log("Posts", this.topicposts);
-        })
-      }
-      console.log(x.topic_id);
-    }
-  }
-}
+//   getTopicPosts() {
+//     console.log("AAAAAZZAA");
+//     console.log(this.posts);
+//     for (let x of this.topics) {
+//       for (let a of this.posts) {
+//         console.log(a.topicForeignKey);
+//         if (x.topic_id == a.topicForeignKey){
+//           this.topicsService.getPosts().subscribe(
+//             (data) => {
+//               this.topicposts = data;
+//               console.log("Posts", this.topicposts);
+//         })
+//       }
+//       console.log(x.topic_id);
+//     }
+//   }
+// }
 
   gotoGameplay(){
     // this.router.navigate(['/externalRedirect', { externalUrl: url}]);

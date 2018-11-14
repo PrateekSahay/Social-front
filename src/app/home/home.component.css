@@ -31,7 +31,7 @@ mat-cell{
 }
 
 h3, h4, h5, h6{
-    margin: 1%;
+    margin: 2%;
 }
 
 @media(max-width: 425px) {

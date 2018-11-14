@@ -18,7 +18,8 @@ export class DataCollectionService {
   }
   getPosts()
   {
-    return this.http.get("http://172.23.238.164:8081/api/values/posts/occupation");
+   // return this.http.get("http://172.23.238.164:8081/api/values/posts/occupation");
+   return this.http.get("http://localhost:5000/api/values/posts/occupation");
   }
 
 
