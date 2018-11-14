@@ -1,36 +1,36 @@
-.UserInfo{
+.UserInfo {
     display: flex;
-    flex-flow: row wrap;    
+    flex-flow: row wrap;
     justify-content: space-around;
 }
 
-.User{
+.User {
     margin-top: 3%;
 }
 
-.ProfilePic{
+.ProfilePic {
     width: 9rem;
     height: 20vh;
 }
 
-.Topics{
+.Topics {
     display: flex;
     flex-flow: row wrap;
 }
 
-.Leaderboard{
+.Leaderboard {
     width: 60%;
 }
 
-mat-header-cell{
+mat-header-cell {
     justify-content: center;
 }
 
-mat-cell{
+mat-cell {
     justify-content: center;
 }
 
-h3, h4, h5, h6{
+h3, h4, h5, h6 {
     margin: 2%;
 }
 
@@ -39,22 +39,17 @@ h3, h4, h5, h6{
         margin-top: 0;
         justify-content: space-around;
     }
-    
-    .ProfilePic{
+    .ProfilePic {
         width: 80px;
         height: 80px;
-        padding-right: 16px;
     }
-
-    .UserInfo{
+    .UserInfo {
         flex-flow: column wrap;
     }
-
-    .Topics{
+    .Topics {
         flex-flow: column wrap;
     }
-
-    .Leaderboard{
+    .Leaderboard {
         width: 100%;
     }
 }

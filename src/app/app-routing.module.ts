@@ -8,11 +8,8 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TopicComponent } from './topic/topic.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
-import { InjectionToken } from '@angular/core';
+import { SearchComponent } from './search/search.component';
 
-
-
-// const externalUrlProvider = new InjectionToken('externalUrlRedirectResolver');
 
 const routes: Route[] = [
   {path:'', redirectTo:'/', pathMatch:'full'},
@@ -23,20 +20,11 @@ const routes: Route[] = [
   {path:'viewprofile',component:UserprofileComponent},
   {path:'topics/:id',component:TopicComponent},
   {path:'profile',component:PublicprofileComponent},
-  // {path:'externalRedirect',resolve: {url: externalUrlProvider}, redirectTo:'/'},
+  {path:'search', component: SearchComponent},
   {path:'**',component: ErrorPageComponent}
 ];
 
 @NgModule({
-//   providers: [
-//     {
-//         provide: externalUrlProvider,
-//         useValue: (route: ActivatedRouteSnapshot) => {
-//             const externalUrl = route.paramMap.get('http://172.23.238.164:4202/play');
-//             window.open(externalUrl, '_self');
-//         },
-//     },
-// ],
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

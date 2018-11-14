@@ -1,27 +1,27 @@
-.companyName{
+.companyName {
   font-size: 150%;
 }
 
-.mat-toolbar{
-height: 10vh;
+.mat-toolbar {
+  height: 10vh;
 }
 
 div {
   overflow: inherit;
 }
 
-.mat-sidenav-container{
-/* background-color: lightskyblue; */
-min-height: 100vh !important;
+.mat-sidenav-container {
+  /* background-color: lightskyblue; */
+  min-height: 100vh !important;
 }
 
-a{
+a {
   text-decoration: none;
   font-size: 100%;
   white-space: normal;
 }
 
-button{
+button {
   font-size: 110%;
   min-width: min-content;
 }
@@ -34,7 +34,7 @@ button{
   flex: 1 1 auto;
 }
 
-.mat-sidenav-content{
-    font-size: 200%;
-    text-align: center;
+.mat-sidenav-content {
+  font-size: 200%;
+  text-align: center;
 }

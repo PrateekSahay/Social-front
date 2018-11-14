@@ -10,7 +10,7 @@ import {MatListModule} from '@angular/material/list';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import {MatIconModule} from '@angular/material/icon';
+import { MatIconModule, MatIconRegistry } from '@angular/material';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import {MatPaginatorModule} from '@angular/material/paginator';
 import {MatExpansionModule} from '@angular/material/expansion';
@@ -29,6 +29,7 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TopicComponent } from './topic/topic.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
+import { SearchComponent } from './search/search.component';
 
 
 
@@ -43,7 +44,8 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     ErrorPageComponent,
     UserprofileComponent,
     TopicComponent,
-    PublicprofileComponent
+    PublicprofileComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -67,7 +69,10 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     MatPaginatorModule,
     FlexLayoutModule
   ],
-  providers: [AllTopicsComponent],
+  providers: [
+    AllTopicsComponent,
+    MatIconRegistry
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

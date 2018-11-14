@@ -1,12 +1,12 @@
-.Topics{
+.Topics {
     display: flex;
     flex-flow: row wrap;
 }
 
-img{
+img {
     width: 10rem;
 }
 
-mat-card{
+mat-card {
     margin: 1rem;
 }

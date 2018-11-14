@@ -1,0 +1,16 @@
+<form class="mysearch">
+  <input type="search" id="Search" name="q" placeholder="Search Topics...">
+  <button mat-raised-button id="searchbutton" color="primary">Search</button>
+</form>
+
+  <mat-card *ngFor="let x of item">
+    <!-- <img mat-card-image src="../../../img/male-icon-4.jpg"> -->
+    <mat-card-title>{{x.topic_name}}</mat-card-title>
+  </mat-card>
+
+  {{display}}
+<!--   
+  <mat-paginator [length]="length"
+              [pageSize]="pageSize"
+              (page)="pageEvent = $event">
+</mat-paginator> -->
