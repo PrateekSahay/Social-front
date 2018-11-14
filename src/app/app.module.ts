@@ -29,6 +29,10 @@ import { ErrorPageComponent } from './error-page/error-page.component';
 import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TopicComponent } from './topic/topic.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login";
+import { getAuthServiceConfigs } from "./socialloginConfig";
+import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -43,7 +47,8 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     ErrorPageComponent,
     UserprofileComponent,
     TopicComponent,
-    PublicprofileComponent
+    PublicprofileComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -65,9 +70,14 @@ import { PublicprofileComponent } from './publicprofile/publicprofile.component'
     HttpClientModule,
     MatExpansionModule,
     MatPaginatorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SocialLoginModule
   ],
-  providers: [AllTopicsComponent],
-  bootstrap: [AppComponent]
+  providers: [AllTopicsComponent,
+              {
+                provide:AuthServiceConfig,
+                useFactory:getAuthServiceConfigs
+              }],
+  bootstrap: [AppComponent],
 })
 export class AppModule { }
