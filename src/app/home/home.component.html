@@ -1,64 +1,53 @@
-<div class="Info">
-  <div class="UserInfo">
-    <div class="User">
-      <!-- <mat-card-header> -->
-      <img class="ProfilePic" src="../../../img/male-icon-4.jpg" ref="Add image">
-      <h5 routerLink="viewprofile">Aman Prakash</h5>
-      <h6>India</h6>
-      <!-- </mat-card-header> -->
+<div class="Waiting games">
+  <h4>Join Games</h4>
+  <div class="Topics">
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Football
     </div>
-      <div class="Leaderboard">
-        <h3>Leaderboard</h3>
-      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-        <!-- Position Column -->
-        <ng-container matColumnDef="position">
-          <mat-header-cell *matHeaderCellDef> Rank </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-        </ng-container>
-      
-        <!-- Name Column -->
-        <ng-container matColumnDef="name">
-          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-        </ng-container>
-      
-        <!-- Level Column -->
-        <ng-container matColumnDef="level">
-          <mat-header-cell *matHeaderCellDef> Level </mat-header-cell>
-          <mat-cell *matCellDef="let element"> {{element.level}} </mat-cell>
-        </ng-container>
-          
-        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-      </mat-table>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Cricket
+    </div>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Hockey
     </div>
   </div>
 </div>
 
 <div class="PopularTopics">
-  <h2>Popular Topics</h2>
+  <h4>Popular Topics</h4>
   <div class="Topics">
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg">
-      <mat-card-title>Football</mat-card-title>
-    </mat-card>
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg">
-      <mat-card-title>Cricket</mat-card-title>
-    </mat-card>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Football
+    </div>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Cricket
+    </div>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Hockey
+    </div>
   </div>
 </div>
 
 <div class="FavouriteTopics">
-  <h2>Favourite Topics</h2>
+  <h4>Favourite Topics</h4>
   <div class="Topics">
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg">
-      <mat-card-title>Football</mat-card-title>
-    </mat-card>
-    <mat-card class="Topic">
-      <img mat-card-image src="../../../img/male-icon-4.jpg">
-      <mat-card-title>Cricket</mat-card-title>
-    </mat-card>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Football
+    </div>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Cricket
+    </div>
+    <div class="Topic">
+      <img src="../../../img/topics_image.png">
+      Hockey
+    </div>
   </div>
 </div>

@@ -1,3 +1,7 @@
+a {
+    color: #000;
+}
+
 .UserInfo {
     display: flex;
     flex-flow: row wrap;
@@ -16,6 +20,18 @@
 .Topics {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.Topic {
+    display: grid;
+    justify-items: center;
+    width: 15rem;
+}
+
+.Topics img {
+    width: 10rem;
+    margin-bottom: 2%;
 }
 
 .Leaderboard {

@@ -1,16 +1,38 @@
-<div class="UserInfo">
-  <mat-card class="mat-elevation-z0">
-    <mat-card-header>
-      <img mat-card-avatar class="ProfilePic" src="../../../img/male-icon-4.jpg" ref="Add image">
-      <mat-card-title>Aman Prakash</mat-card-title>
-      <mat-card-subtitle>India</mat-card-subtitle>
-      <mat-card-subtitle>Follow</mat-card-subtitle>
-    </mat-card-header>
-    <mat-card-content>
-        <mat-card-title>Games Played</mat-card-title>
-        <mat-card-title>Followers</mat-card-title>
-    </mat-card-content>
-  </mat-card>
+<div class="Info">
+  <div class="UserInfo">
+    <div class="User">
+      <!-- <mat-card-header> -->
+      <img class="ProfilePic" src="../../../img/male-icon-4.jpg" ref="Add image">
+      <a routerLink="viewprofile"><h5>Aman Prakash</h5></a>
+      <h6>India</h6>
+      <!-- </mat-card-header> -->
+    </div>
+      <div class="Leaderboard">
+        <h3>Leaderboard</h3>
+      <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <!-- Position Column -->
+        <ng-container matColumnDef="position">
+          <mat-header-cell *matHeaderCellDef> Rank </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
+        </ng-container>
+      
+        <!-- Name Column -->
+        <ng-container matColumnDef="name">
+          <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
+        </ng-container>
+      
+        <!-- Level Column -->
+        <ng-container matColumnDef="level">
+          <mat-header-cell *matHeaderCellDef> Level </mat-header-cell>
+          <mat-cell *matCellDef="let element"> {{element.level}} </mat-cell>
+        </ng-container>
+          
+        <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+        <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+      </mat-table>
+    </div>
+  </div>
 </div>
 
 <div class="WritePost">

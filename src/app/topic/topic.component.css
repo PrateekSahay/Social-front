@@ -1,74 +1,65 @@
-.TopicInfo{
-  justify-content: space-around;
+.TopicInfo {
+  justify-content: space-evenly;
 }
 
-.Topic{
+.Topic {
   margin: 3%;
-  float: left;
 }
 
-.ProfilePic{
+.ProfilePic {
   width: 80px;
   height: 80px;
-  padding-right: 16px;
-  margin: 1% 2% 3% 4%;
 }
 
-.posts{
+.posts {
   margin: 3%;
-  float: right;
 }
 
 .post-card {
-    max-width: 400px;
-    justify-content: center;
-  }
-  
-  .post-header-image {
-    background-image: url('https://material.angular.io/assets/img/examples/shiba1.jpg');
-    background-size: cover;
-  }
+  max-width: 400px;
+  /* justify-content: center; */
+}
 
-.WritePost{
+.post-header-image {
+  background-size: cover;
+}
+
+.WritePost {
   display: inline-grid;
 }
 
-  mat-expansion-panel{
-    margin:0;
-    width: 100%;
-    padding:0;
+mat-expansion-panel {
+  margin: 0;
+  width: 100%;
+  /* padding: 0; */
+}
+
+@media(max-width: 320px) {
+  .ProfilePic {
+    width: 80px;
+    height: 80px;
   }
-
-
-  @media(max-width: 425px) {
-    
-    .ProfilePic{
-        width: 80px;
-        height: 80px;
-        padding-right: 16px;
-        margin: 1% 2% 3% 4%;
-    }
-
-    textarea {
-      resize: none;
-    }
-
-    .title{
-      justify-content: center;
-      margin-bottom: 6%;
-      width: 95%;
-    }
-
-    mat-card-content{
-        display: flex;
-        justify-content: space-around;
-    }
-
-    #playbutton{
-      margin: 0%;
-    }
-
-    #title{
-      margin: auto;
-    }
+  textarea {
+    resize: none;
   }
+  .title {
+    justify-content: center;
+    margin-bottom: 6%;
+    width: 95%;
+  }
+  mat-card-content {
+    justify-content: space-around;
+  }
+  #playbutton {
+    margin: 0%;
+  }
+  #title {
+    margin: auto;
+  }
+}
+
+@media(min-width: 725px) {
+  .Topic{
+    float: left;
+  }
+}

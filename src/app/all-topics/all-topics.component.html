@@ -1,10 +1,10 @@
 <!-- <div class="Category"> -->
-<h2>Category1</h2>
+<h4>Topics</h4>
 <div class="Topics">
-  <mat-card *ngFor="let a of topics" class="Topic">
-    <!-- <img mat-card-image src="../../../img/male-icon-4.jpg"> -->
-    <mat-card-title routerLink="/topics/{{a.topic_name}}">{{a.topic_name}}</mat-card-title>
-  </mat-card>
+  <div *ngFor="let a of topics" class="Topic">
+    <img src="../../../img/topics_image.png">
+    <a routerLink="/topics/{{a.topic_name}}">{{a.topic_name}}</a>
+  </div>
 <!--   
   <mat-paginator [length]="length"
               [pageSize]="pageSize"

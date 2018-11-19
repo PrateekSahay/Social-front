@@ -1,12 +1,40 @@
 .Topics {
     display: flex;
     flex-flow: row wrap;
+    justify-content: space-around;
 }
 
 img {
     width: 10rem;
 }
 
-mat-card {
-    margin: 1rem;
+.Topic {
+    display: grid;
+    justify-items: center;
+    width: 15rem;
+}
+
+
+@media(max-width: 320px) {
+    mat-card {
+        width: 90%;
+    }
+}
+
+@media(max-width: 375px) {
+    mat-card {
+        width: 90%;
+    }
+}
+
+@media(max-width: 425px) {
+    mat-card {
+        width: 90%;
+    }
+}
+
+@media(max-width: 768px) {
+    .Topics {
+        justify-content: space-evenly;
+    }
 }

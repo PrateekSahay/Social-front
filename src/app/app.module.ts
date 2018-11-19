@@ -30,8 +30,9 @@ import { UserprofileComponent } from './userprofile/userprofile.component';
 import { TopicComponent } from './topic/topic.component';
 import { PublicprofileComponent } from './publicprofile/publicprofile.component';
 import { SearchComponent } from './search/search.component';
-
-
+import { SocialLoginModule, AuthServiceConfig, GoogleLoginProvider } from "angular-6-social-login";
+import { getAuthServiceConfigs } from "./socialloginConfig";
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +46,8 @@ import { SearchComponent } from './search/search.component';
     UserprofileComponent,
     TopicComponent,
     PublicprofileComponent,
-    SearchComponent
+    SearchComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
@@ -67,10 +69,15 @@ import { SearchComponent } from './search/search.component';
     HttpClientModule,
     MatExpansionModule,
     MatPaginatorModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+    SocialLoginModule
   ],
   providers: [
     AllTopicsComponent,
+    {
+      provide:AuthServiceConfig,
+      useFactory:getAuthServiceConfigs
+    },
     MatIconRegistry
   ],
   bootstrap: [AppComponent]

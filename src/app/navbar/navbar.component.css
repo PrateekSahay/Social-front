@@ -4,6 +4,8 @@
 
 .mat-toolbar {
   height: 10vh;
+  background-color: #000000;
+  text-decoration-color: #ECFEE8;
 }
 
 div {
@@ -11,7 +13,7 @@ div {
 }
 
 .mat-sidenav-container {
-  /* background-color: lightskyblue; */
+  background-color: #000000;
   min-height: 100vh !important;
 }
 
@@ -38,3 +40,12 @@ button {
   font-size: 200%;
   text-align: center;
 }
+
+.mat-sidenav-content {
+  background-color: #141115;
+}
+
+.mat-drawer-container {
+  color: white;
+}
+
