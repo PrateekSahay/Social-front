@@ -1,25 +1,16 @@
-# base image
-FROM node:9.6.1
+# Use an official Python runtime as a parent image
+FROM node
 
-# # install chrome for protractor tests
-# RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | apt-key add -
-# RUN sh -c 'echo "deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list'
-# RUN apt-get update && apt-get install -yq google-chrome-stable
+# Set the working directory to /app
+RUN mkdir /app
+WORKDIR /app
 
-# set working directory
-RUN mkdir /usr/src/socialapp
-WORKDIR /usr/src/socialapp
+# Copy the current directory contents into the container at /app
+COPY . /app
 
-# add `/usr/src/app/node_modules/.bin` to $PATH
-ENV PATH /usr/src/socialapp/node_modules/.bin:$PATH
-
-# install and cache app dependencies
-COPY package.json /usr/src/socialapp/package.json
+# Install any needed packages specified in requirements.txt
 RUN npm install
-RUN npm install -g @angular/cli@1.7.1
+Run npm i @angular/cli
 
-# add app
-COPY . /usr/src/socialapp
-
-# start app
-CMD ng serve --host 0.0.0.0
+# Make port 80 available to the world outside this container
+EXPOSE 80
