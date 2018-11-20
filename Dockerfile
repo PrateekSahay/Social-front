@@ -6,6 +6,8 @@ RUN mkdir /app
 WORKDIR /app
 
 # Copy the current directory contents into the container at /app
+COPY package.json /app/ 
+RUN npm install --dev && npm cache clean
 COPY . /app
 
 # Install any needed packages specified in requirements.txt
@@ -15,4 +17,5 @@ Run npm i @angular/cli
 # Make port 80 available to the world outside this container
 EXPOSE 80
 
-RUN ng serve
+#RUN ng serve
+CMD [ "npm", "start" ]
