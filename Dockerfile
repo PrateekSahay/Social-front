@@ -1,21 +1,19 @@
-# Use an official Python runtime as a parent image
-FROM node
+#Stage-1
 
-# Set the working directory to /app
-RUN mkdir /app
+FROM node:latest as node
+
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app
-COPY package.json /app/ 
-RUN npm install 
-COPY . /app
+COPY package*.json ./
 
-# Install any needed packages specified in requirements.txt
-#RUN npm install
-Run npm i @angular/cli
+RUN npm install
 
-# Make port 80 available to the world outside this container
-#EXPOSE 80
+COPY . .
 
-#RUN ng serve
-CMD [ "npm", "start" ]
+RUN npm run build
+
+#Stage-2
+
+FROM nginx:alpine
+
+COPY --from=node /app/dist/quizartSocial usr/share/nginx/html
