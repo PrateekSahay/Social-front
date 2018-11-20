@@ -15,7 +15,7 @@ COPY . /app
 Run npm i @angular/cli
 
 # Make port 80 available to the world outside this container
-EXPOSE 80
+#EXPOSE 80
 
 #RUN ng serve
 CMD [ "npm", "start" ]
