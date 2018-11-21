@@ -1,0 +1,6 @@
+version: '3'
+services:
+  socialfront:
+    build: ./Social-front
+    ports:
+     - "4210:80"

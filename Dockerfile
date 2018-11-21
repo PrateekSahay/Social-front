@@ -12,8 +12,14 @@ COPY . .
 
 RUN npm run build
 
+RUN ls -alh /app/dist
+
+EXPOSE 80
+
 #Stage-2
 
 FROM nginx:alpine
 
-COPY --from=node /app/dist/quizartSocial usr/share/nginx/html
+COPY --from=node /app/dist/quirartSocial /usr/share/nginx/html
+
+CMD ["nginx", "-g", "daemon off;"]
